@@ -1,0 +1,90 @@
+\hypertarget{class_onegin_sorter}{}\doxysection{Onegin\+Sorter Class Reference}
+\label{class_onegin_sorter}\index{OneginSorter@{OneginSorter}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_onegin_sorter_a431e5fd8cff136571f1ee0ed874de8d3}{Onegin\+Sorter}} (const char $\ast$text, int size\+\_\+of\+\_\+text)
+\item 
+void \mbox{\hyperlink{class_onegin_sorter_a211faea8471b8e5e81b3779c16725c89}{Sort\+In\+Direct\+Order}} (std\+::string\+\_\+view $\ast$sorted\+Text)
+\item 
+void \mbox{\hyperlink{class_onegin_sorter_a60a3623af8d69c86102e55b08b357674}{Sort\+In\+Reverse\+Oreder}} (std\+::string\+\_\+view $\ast$sorted\+Text)
+\item 
+void \mbox{\hyperlink{class_onegin_sorter_a86d7fd37d317ea963e9a7b44b67a3eec}{Sourse}} (std\+::string\+\_\+view $\ast$sorted\+Text)
+\item 
+int \mbox{\hyperlink{class_onegin_sorter_ad35f116ef5e56aa01afef40607f323f1}{Number\+Of\+Strings}} ()
+\item 
+\mbox{\hyperlink{class_onegin_sorter_ad827327a4b9cce5ac43c3d97e848a371}{$\sim$\+Onegin\+Sorter}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_onegin_sorter_a431e5fd8cff136571f1ee0ed874de8d3}\label{class_onegin_sorter_a431e5fd8cff136571f1ee0ed874de8d3}} 
+\index{OneginSorter@{OneginSorter}!OneginSorter@{OneginSorter}}
+\index{OneginSorter@{OneginSorter}!OneginSorter@{OneginSorter}}
+\doxysubsubsection{\texorpdfstring{OneginSorter()}{OneginSorter()}}
+{\footnotesize\ttfamily Onegin\+Sorter\+::\+Onegin\+Sorter (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text,  }\item[{int}]{size\+\_\+of\+\_\+text }\end{DoxyParamCaption})}
+
+Constructor for \mbox{\hyperlink{class_onegin_sorter}{Onegin\+Sorter}} object 
+\begin{DoxyParams}{Parameters}
+{\em text} & source pointer \\
+\hline
+{\em size\+\_\+of\+\_\+text} & source length \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_onegin_sorter_ad827327a4b9cce5ac43c3d97e848a371}\label{class_onegin_sorter_ad827327a4b9cce5ac43c3d97e848a371}} 
+\index{OneginSorter@{OneginSorter}!````~OneginSorter@{$\sim$OneginSorter}}
+\index{````~OneginSorter@{$\sim$OneginSorter}!OneginSorter@{OneginSorter}}
+\doxysubsubsection{\texorpdfstring{$\sim$OneginSorter()}{~OneginSorter()}}
+{\footnotesize\ttfamily Onegin\+Sorter\+::$\sim$\+Onegin\+Sorter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor for \mbox{\hyperlink{class_onegin_sorter}{Onegin\+Sorter}} object 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_onegin_sorter_ad35f116ef5e56aa01afef40607f323f1}\label{class_onegin_sorter_ad35f116ef5e56aa01afef40607f323f1}} 
+\index{OneginSorter@{OneginSorter}!NumberOfStrings@{NumberOfStrings}}
+\index{NumberOfStrings@{NumberOfStrings}!OneginSorter@{OneginSorter}}
+\doxysubsubsection{\texorpdfstring{NumberOfStrings()}{NumberOfStrings()}}
+{\footnotesize\ttfamily int Onegin\+Sorter\+::\+Number\+Of\+Strings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Number of strings \begin{DoxyReturn}{Returns}
+number of strings in sourse 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_onegin_sorter_a211faea8471b8e5e81b3779c16725c89}\label{class_onegin_sorter_a211faea8471b8e5e81b3779c16725c89}} 
+\index{OneginSorter@{OneginSorter}!SortInDirectOrder@{SortInDirectOrder}}
+\index{SortInDirectOrder@{SortInDirectOrder}!OneginSorter@{OneginSorter}}
+\doxysubsubsection{\texorpdfstring{SortInDirectOrder()}{SortInDirectOrder()}}
+{\footnotesize\ttfamily void Onegin\+Sorter\+::\+Sort\+In\+Direct\+Order (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view $\ast$}]{sorted\+Text }\end{DoxyParamCaption})}
+
+Sorts the lines of the source text in direct lexicographic order 
+\begin{DoxyParams}{Parameters}
+{\em sorted\+Text} & array of std\+::string\+\_\+view into which sorted rows are written \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_onegin_sorter_a60a3623af8d69c86102e55b08b357674}\label{class_onegin_sorter_a60a3623af8d69c86102e55b08b357674}} 
+\index{OneginSorter@{OneginSorter}!SortInReverseOreder@{SortInReverseOreder}}
+\index{SortInReverseOreder@{SortInReverseOreder}!OneginSorter@{OneginSorter}}
+\doxysubsubsection{\texorpdfstring{SortInReverseOreder()}{SortInReverseOreder()}}
+{\footnotesize\ttfamily void Onegin\+Sorter\+::\+Sort\+In\+Reverse\+Oreder (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view $\ast$}]{sorted\+Text }\end{DoxyParamCaption})}
+
+Sorts the lines of the source text in reverse lexicographic order 
+\begin{DoxyParams}{Parameters}
+{\em sorted\+Text} & array of std\+::string\+\_\+view into which sorted rows are written \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_onegin_sorter_a86d7fd37d317ea963e9a7b44b67a3eec}\label{class_onegin_sorter_a86d7fd37d317ea963e9a7b44b67a3eec}} 
+\index{OneginSorter@{OneginSorter}!Sourse@{Sourse}}
+\index{Sourse@{Sourse}!OneginSorter@{OneginSorter}}
+\doxysubsubsection{\texorpdfstring{Sourse()}{Sourse()}}
+{\footnotesize\ttfamily void Onegin\+Sorter\+::\+Sourse (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view $\ast$}]{sorted\+Text }\end{DoxyParamCaption})}
+
+Returns sourse 
+\begin{DoxyParams}{Parameters}
+{\em sorted\+Text} & array of std\+::string\+\_\+view into which rows are written \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/yulia/\+Desktop/\+Ded/\+Onegin/Onegin\+Sorter.\+h\item 
+/\+Users/yulia/\+Desktop/\+Ded/\+Onegin/Onegin\+Sorter.\+cpp\end{DoxyCompactItemize}
