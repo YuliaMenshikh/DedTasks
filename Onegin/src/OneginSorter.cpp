@@ -55,7 +55,7 @@ void OneginSorter::SortInReverseOreder(std::string_view* sortedText)
     std::sort(sortedText, sortedText + _numberOfStrings, CompareReverseOrder);
 }
 
-void OneginSorter::Sourse(std::string_view *sortedText)
+void OneginSorter::Source(std::string_view *sortedText)
 {
     for (int i = 0; i < _numberOfStrings; ++i)
     {
@@ -91,11 +91,11 @@ bool OneginSorter::CompareDirectOrder(const std::string_view &s1, const std::str
             }
         }
 
-        if (tolower(s1[counter1]) > tolower(s2[counter2]))
+        if (tolower(s1[counter1]) - tolower(s2[counter2]) > 0)
         {
             return false;
         }
-        if (tolower(s1[counter1]) < tolower(s2[counter2]))
+        if (tolower(s1[counter1]) - tolower(s2[counter2]) < 0)
         {
             return true;
         }
@@ -126,11 +126,11 @@ bool OneginSorter::CompareReverseOrder(const std::string_view &s1, const std::st
             }
         }
 
-        if (tolower(s1[counter1]) > tolower(s2[counter2]))
+        if (tolower(s1[counter1]) - tolower(s2[counter2]) > 0)
         {
             return true;
         }
-        if (tolower(s1[counter1]) < tolower(s2[counter2]))
+        if (tolower(s1[counter1]) - tolower(s2[counter2]) < 0)
         {
             return false;
         }

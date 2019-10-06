@@ -21,10 +21,7 @@ void WriteToFile(const char* fileName, std::string_view* text, int stringCount)
 
     for (size_t i = 0; i < stringCount; ++i)
     {
-        for (int j = 0; j < text[i].length(); ++j)
-        {
-            fputc(text[i][j], file);
-        }
+        fwrite(text[i], file);
         fputc('\n', file);
     }
 
@@ -34,13 +31,37 @@ void WriteToFile(const char* fileName, std::string_view* text, int stringCount)
 }
 
 /*!
+ * It does the necessary manipulations in the task
+ * @param text source
+ * @param fileOut file to write in
+ */
+void GetAnswer(const char* text, const char* fileOut)
+{
+    OneginSorter onegin(text, textSize);
+
+    std::string_view* sortedText = new std::string_view[onegin.NumberOfStrings()];
+
+    onegin.SortInDirectOrder(sortedText);
+    WriteToFile(fileOut, sortedText, onegin.NumberOfStrings());
+
+    onegin.SortInReverseOreder(sortedText);
+    WriteToFile(fileOut, sortedText, onegin.NumberOfStrings());
+
+    onegin.Source(sortedText);
+    WriteToFile(fileOut, sortedText, onegin.NumberOfStrings());
+
+    delete [] sortedText;
+}
+
+/*!
  * Reads a file and does the necessary manipulations in the task
  * @param fileName name of file
  */
-void ReadFile(const char* fileName)
+void ReadFileOnegin(const char* fileName, const char* fileOut)
 {
     int textSize = 0;
     char* text = nullptr;
+
 
     if (textSize) {
         delete[] text;
@@ -65,34 +86,17 @@ void ReadFile(const char* fileName)
 
     fclose(file);
 
-
-    OneginSorter onegin(text, textSize);
-
-    std::string_view* sortedText = new std::string_view[onegin.NumberOfStrings()];
-
-    onegin.SortInDirectOrder(sortedText);
-    WriteToFile("Onegin2.txt", sortedText, onegin.NumberOfStrings());
-
-    onegin.SortInReverseOreder(sortedText);
-    WriteToFile("Onegin2.txt", sortedText, onegin.NumberOfStrings());
-
-    onegin.Sourse(sortedText);
-    WriteToFile("Onegin2.txt", sortedText, onegin.NumberOfStrings());
+    GetAnswer(text, fileOut);
 
     delete [] text;
-    delete [] sortedText;
-}
-
-void Test()
-{
-    RUN_ALL_TESTS();
 }
 
 int main()
 {
     const char* fileName = "Onegin.txt";
-    ReadFile(fileName);
+    const char* fileOut = "Onegin2.txt";
+    ReadFile(fileName, fileOut);
 
-    Test();
+    RUN_ALL_TESTS();
     return 0;
 }

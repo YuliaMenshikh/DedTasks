@@ -27,14 +27,14 @@ public:
     void SortInReverseOreder(std::string_view* sortedText);
 
     /*!
-     * Returns sourse
+     * Returns source
      * @param sortedText array of std::string_view into which rows are written
      */
-    void Sourse(std::string_view* sortedText);
+    void Source(std::string_view *sortedText);
 
     /*!
      * Number of strings
-     * @return number of strings in sourse
+     * @return number of strings in source
      */
     int NumberOfStrings();
 
