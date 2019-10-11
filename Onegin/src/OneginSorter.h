@@ -38,11 +38,6 @@ public:
      */
     int NumberOfStrings();
 
-    /*!
-     * Destructor for OneginSorter object
-     */
-    ~OneginSorter();
-
 private:
     /*!
      * String comparator (direct lexicographic order)
@@ -73,5 +68,4 @@ private:
     /*!
      * Variable to store text
      */
-    char * _buf;
 };

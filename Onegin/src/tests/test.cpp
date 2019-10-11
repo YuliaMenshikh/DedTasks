@@ -24,7 +24,7 @@ TEST(OneginSorter, SortReverseOrder)
     OneginSorter poem(text, 12);
     std::string_view* t = new std::string_view[3];
     poem.SortInReverseOreder(t);
-    EXPECT_EQ(t[0][0], text[4]);
+    EXPECT_EQ(t[0][0], text[8]);
     delete [] t;
 }
 
@@ -34,7 +34,7 @@ TEST(OneginSorter, Sourse)
     OneginSorter poem(text, 12);
     std::string_view* t = new std::string_view[3];
     poem.SortInReverseOreder(t);
-    poem.Sourse(t);
+    poem.Source(t);
     EXPECT_EQ(t[0][0], text[0]);
     delete [] t;
 }
